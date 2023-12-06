@@ -17,7 +17,7 @@
     <script src="https://cdn.jsdelivr.net/gh/linhminaz/p2p_jwplayer@main/jwplayer.hlsjs.min.js"></script>
 
     <script>
-        var episode_id = id = 47756;
+        var id = 47756;
         const wrapper = document.getElementById('P2Pplayer');
         renderPlayer(id);
         function renderPlayer(id) {
