@@ -1,29 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charSet="utf-8" />
-
     <style>
         .jwplayer {
             position: unset !important;
         }
     </style>
-
 </head>
-
 <body>
-
-
     <div id="P2Pplayer"></div>
-
-    <!-- Page script -->
-    <script src="p2p-media-loader-core.min.js"></script>
-    <script src="p2p-media-loader-hlsjs.min.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/gh/linhminaz/jwplayer@main/jw.8.29.0.js"></script>
-    <script src="hls.min.js"></script>
-    <script src="jwplayer.hlsjs.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/linhminaz/p2p_jwplayer@main/p2p-media-loader-core.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/linhminaz/p2p_jwplayer@main/p2p-media-loader-hlsjs.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/linhminaz/p2p_jwplayer@main/jwplayer-8.9.3.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/linhminaz/p2p_jwplayer@main/hls.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/linhminaz/p2p_jwplayer@main/jwplayer.hlsjs.min.js"></script>
 
     <script>
         var episode_id = id = 47756;
@@ -67,9 +58,8 @@
                     skiptext: "Bỏ qua"
                 }
             };
-
+            
             const segments_in_queue = 50;
-
             var engine_config = {
                 debug: !1,
                 segments: {
@@ -109,9 +99,7 @@
                 player.setup(objSetup);
             }
 
-
             const resumeData = 'OPCMS-PlayerPosition-' + id;
-
             player.on('ready', function () {
                 if (typeof (Storage) !== 'undefined') {
                     if (localStorage[resumeData] == '' || localStorage[resumeData] == 'undefined') {
@@ -154,11 +142,7 @@
                 date.setSeconds(seconds);
                 return date.toTimeString().replace(/.*(\d{2}:\d{2}:\d{2}).*/, "$1");
             }
-
         }
     </script>
-
-
 </body>
-
 </html>
